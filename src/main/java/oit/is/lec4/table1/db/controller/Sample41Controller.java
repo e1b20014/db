@@ -29,13 +29,18 @@ public class Sample41Controller {
   }
 
   @GetMapping("step3")
-   public String sample43() {
+  public String sample43() {
     return "sample43.html";
   }
 
   @GetMapping("step4")
   public String sample45() {
     return "sample45.html";
+  }
+
+  @GetMapping("step6")
+  public String sample46() {
+    return "sample46.html";
   }
 
   @GetMapping("step2/{id}")
