@@ -32,6 +32,11 @@ public class Sample41Controller {
     return "sample43.html";
   }
 
+  @GetMapping("step4")
+  public String sample45() {
+    return "sample45.html";
+  }
+
   @GetMapping("step2/{id}")
   public String sample42(@PathVariable Integer id, ModelMap model) {
     Chamber chamber2 = chamberMapper.selectById(id);
