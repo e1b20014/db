@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import oit.is.lec4.table1.db.model.Chamber;
+import oit.is.lec4.table1.db.model.ChamberUser;
 import oit.is.lec4.table1.db.model.ChamberMapper;
 
 @Controller
@@ -70,4 +71,13 @@ public class Sample41Controller {
     model.addAttribute("chambers5", chambers5);
     return "sample45.html";
   }
+
+  @GetMapping("step7")
+  @Transactional
+  public String sample47(ModelMap model) {
+    ArrayList<ChamberUser> chamberUsers7 = chamberMapper.selectAllChamberUser();
+    model.addAttribute("chamberUsers7", chamberUsers7);
+    return "sample46.html";
+  }
+
 }
